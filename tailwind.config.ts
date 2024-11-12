@@ -10,6 +10,20 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			animation: {
+				pulse: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+				fadeIn: "fadeIn 1s cubic-bezier(0.4, 0, 0.6, 1) ",
+			},
+			keyframes: {
+				pulse: {
+					"0%, 100%": { transform: "scale(1)" },
+					"50%": { transform: "scale(1.2)" },
+				},
+				fadeIn: {
+					"0%": { opacity: "0" },
+					"100%": { opacity: "1" },
+				},
+			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
